@@ -14,7 +14,6 @@ public class JogadorScript : MonoBehaviour
     void Update()
     {
         Transform t;                                        // Add data type for t variable
-        t = new.Transform();
         t = GetComponent<Transform>();                      // Get Transform component
         // transform.position = new Vector3();              // Get a new Instance of position using Vector3
         if (Input.getKey(KeyCode.RightArrow)); {
