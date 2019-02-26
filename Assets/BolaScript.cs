@@ -26,7 +26,10 @@ public class BolaScript : MonoBehaviour
     // Methods for collision
     void OnCollisionEnter2D(Collision2D colisao)
     {
-        print(colisao.gameObject.name);
+        print(colisao.gameObject.tag);
+        if (colisao.gameObject.tag == "Bloco") {
+            Destroy(colisao.gameObject);
+        }
     }
 
     void OnCollisionStay2D(Collision2D colisao)
