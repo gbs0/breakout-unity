@@ -23,18 +23,19 @@ public class BolaScript : MonoBehaviour
         //colisorDebug = GetComponent<>();
     }
 
-    void onCollisionEnter2D(Collision2D other)
+    // Methods for collision
+    void OnCollisionEnter2D(Collision2D colisao)
     {
-
+        print(colisao.gameObject.name);
     }
 
-    void onCollisionEnter2D(Collision2D other)
+    void OnCollisionStay2D(Collision2D colisao)
     {
-        
+        print("Stay");   
     }
 
-    void onCollisionEnter2D(Collision2D other)
+    void OnCollisionExit2D(Collision2D colisao)
     {
-        
+        print("Exit");
     }
 }
