@@ -26,5 +26,7 @@ public class JogadorScript : MonoBehaviour
 
         Vector3 posicao = t.position
         if (posicao.x > 2.9f) posicao.x = 2.9f;
+        if (posicao.x < -2.9f) posicao.x = -2.9f;
+        transform.position = posicao;
     }
 }
