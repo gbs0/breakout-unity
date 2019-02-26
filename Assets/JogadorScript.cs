@@ -16,17 +16,18 @@ public class JogadorScript : MonoBehaviour
         Transform t;                                        // Add data type for t variable
         t = GetComponent<Transform>();                      // Get Transform component
         // transform.position = new Vector3();              // Get a new Instance of position using Vector3
-        if (Input.GetKey(KeyCode.RightArrow) ); {
+        if (Input.GetKey(KeyCode.RightArrow)) {
             t.Translate(0.1f, 0, 0);                        // Add new translates for x axis
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow)); {
+        if (Input.GetKey(KeyCode.LeftArrow)) {
             t.Translate(-0.1f, 0, 0);
         }
 
-        Vector3 posicao = t.position
-        if (posicao.x > 2.9f) posicao.x = 2.9f;
-        if (posicao.x < -2.9f) posicao.x = -2.9f;
+        Vector3 posicao = t.position;
+        // if (posicao.x > 2.9f) posicao.x = 2.9f;
+        // if (posicao.x < -2.9f) posicao.x = -2.9f;
+        posicao.x = Mathf.Clamp(posicao.x, -2.9f, 2.9f);  //One line statement
         transform.position = posicao;
     }
 }
