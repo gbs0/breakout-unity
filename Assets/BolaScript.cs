@@ -22,4 +22,19 @@ public class BolaScript : MonoBehaviour
         //colisorDebug = new.RigidBody2D();
         //colisorDebug = GetComponent<>();
     }
+
+    void onCollisionEnter2D(Collision2D other)
+    {
+
+    }
+
+    void onCollisionEnter2D(Collision2D other)
+    {
+        
+    }
+
+    void onCollisionEnter2D(Collision2D other)
+    {
+        
+    }
 }
