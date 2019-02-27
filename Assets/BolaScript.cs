@@ -42,7 +42,9 @@ public class BolaScript : MonoBehaviour
         Vector2 forceLeft = new Vector2(100f, 0);
         Vector2 forceRight = new Vector2(-100f, 0);        
         print(colisao.gameObject.transform.position);   // Pick value from player axis
-        if (colisao.gameObject.transform.position.x <= -0.1 ) {
+        if (colisao.gameObject.transform.position.x < 0 ) {
+            rb.AddForce(forceRight);
+        } else {
             rb.AddForce(forceLeft);
         }
     }
