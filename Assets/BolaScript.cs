@@ -43,12 +43,15 @@ public class BolaScript : MonoBehaviour
         Vector2 forceLeft = new Vector2(100f, 0);
         Vector2 forceRight = new Vector2(-100f, 0);        
         //print(colisao.gameObject.transform.position);   // Pick value from player axis
-        if (colisao.gameObject.transform.position.x < colisao.transform.position.x ) {
-            print("quina esquerda");
-            rb.AddForce(forceRight);
-        } else {
-            print("quina direita");
-            rb.AddForce(forceLeft);
+        if (colisao.gameObject.tag == "Player") {
+            if (colisao.gameObject.transform.position.x < colisao.transform.position.x ) {
+                print("quina esquerda");
+                rb.AddForce(forceRight);
+            } else {
+                print("quina direita");
+                rb.AddForce(forceLeft);
+            }    
         }
+        
     }
 }
