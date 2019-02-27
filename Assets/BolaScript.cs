@@ -39,6 +39,11 @@ public class BolaScript : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D colisao)
     {
-        print("Exit");
+        Vector2 forceLeft = new Vector2(100f, 0);
+        Vector2 forceRight = new Vector2(-100f, 0);        
+        print(colisao.gameObject.transform.position);   // Pick value from player axis
+        if (colisao.gameObject.transform.position.x <= -0.1 ) {
+            rb.AddForce(forceLeft);
+        }
     }
 }
