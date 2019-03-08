@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class BolaScript : MonoBehaviour
 {
     Rigidbody2D rb;         // Set the variable type
-    public Text score;         
+    public Text score;      // Set the score reference on UI;    
 
     // Start is called before the first frame update
     void Start()
