@@ -40,6 +40,8 @@ public class BolaScript : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D colisao)
     {
+        
+        // ADD BALL TRANSFORM
         // print(colisao.transform.position.x);
         Vector2 forceLeft = new Vector2(-100f, 0);
         Vector2 forceRight = new Vector2(100f, 0);        
