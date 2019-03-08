@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 public class BolaScript : MonoBehaviour
 {
-    Rigidbody2D rb;         // Set the variable type
-    public Text score;      // Set the score reference on UI;    
-    public Float playerScore;
-    
-    score.text = "Score:" + snakeScore()
+    Rigidbody2D rb;             // Set the variable type
+    public Text score;          // Set the score reference on UI;    
+    public Float playerScore;   // Hold player score
+
+    score.text = "Score:" + snakeScore.ToString();
 
 
     // Start is called before the first frame update
@@ -34,7 +34,7 @@ public class BolaScript : MonoBehaviour
         print(colisao.gameObject.tag);
         if (colisao.gameObject.tag == "Bloco") {
             Destroy(colisao.gameObject);
-            // add score conditional
+            playerScore++;
 
         }
     }
