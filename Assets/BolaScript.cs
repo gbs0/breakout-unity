@@ -6,6 +6,10 @@ public class BolaScript : MonoBehaviour
 {
     Rigidbody2D rb;         // Set the variable type
     public Text score;      // Set the score reference on UI;    
+    public Float playerScore;
+    
+    score.text = "Score:" + snakeScore()
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +35,7 @@ public class BolaScript : MonoBehaviour
         if (colisao.gameObject.tag == "Bloco") {
             Destroy(colisao.gameObject);
             // add score conditional
+
         }
     }
 
