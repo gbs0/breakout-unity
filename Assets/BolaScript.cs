@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class BolaScript : MonoBehaviour
 {
     Rigidbody2D rb;         // Set the variable type
+    public Text score;         
 
     // Start is called before the first frame update
     void Start()

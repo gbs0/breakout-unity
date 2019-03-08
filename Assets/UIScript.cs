@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class UIScript : MonoBehaviour
 {
-    public Text score;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +16,6 @@ public class UIScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	if     
+
     }
 }
