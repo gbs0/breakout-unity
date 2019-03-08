@@ -378,7 +378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6479208da873ec43bd17b165be7873f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 0}
+  score: {fileID: 879515609}
+  playerScore: 0
 --- !u!61 &265308912
 BoxCollider2D:
   m_ObjectHideFlags: 0
