@@ -30,6 +30,7 @@ public class BolaScript : MonoBehaviour
         print(colisao.gameObject.tag);
         if (colisao.gameObject.tag == "Bloco") {
             Destroy(colisao.gameObject);
+            // add score conditional
         }
     }
 
