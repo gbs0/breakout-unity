@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\BolaScript.cs" />
+     <Compile Include="Assets\DerreotaScript.cs" />
      <Compile Include="Assets\JogadorScript.cs" />
      <Compile Include="Assets\UIScript.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
