@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class JogadorScript : MonoBehaviour
-{
+{   
+    public int playerLife;
     // Start is called before the first frame update
     void Start()
     {
