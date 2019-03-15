@@ -31,4 +31,5 @@ public class JogadorScript : MonoBehaviour
         posicao.x = Mathf.Clamp(posicao.x, -2.9f, 2.9f);  //One line statement
         transform.position = posicao;
     }
+
 }
