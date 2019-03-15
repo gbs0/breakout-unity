@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class JogadorScript : MonoBehaviour
 {   
+    // public int playerLife = new int();
     public int playerLife = 3;
     // Start is called before the first frame update
     void Start()
