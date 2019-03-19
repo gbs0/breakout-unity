@@ -6,14 +6,15 @@ public class DerrotaScript : MonoBehaviour
 {	
 
 	Rigidbody2D rb;             // Set the variable type
+	public GameObject prefab;
 	public int hit_times;
 	bool isGoingUp = true;
-	public GameObject prefab;
 	GameObject player;
 
 	void Start() 
 	{
 		rb = GetComponent<Rigidbody2D>(); 
+		player = GameObject.Find("Jogador");
 	}
 
 	void Update()
