@@ -31,7 +31,7 @@ public class DerrotaScript : MonoBehaviour
 	void Update()
 	{
 		// this should be an bool condition
-		if () {
+		if (isGoingUp) {
 			if(Time.timeScale == 1)
 					Time.timeScale == 0;
 			else
