@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bloco
+  - Bola
   layers:
   - Default
   - TransparentFX

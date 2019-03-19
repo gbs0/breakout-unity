@@ -62,7 +62,7 @@ public class DerrotaScript : MonoBehaviour
 				lifes--;
 			} else
 			{
-				ball.GetComponent<BolaScript>().enable = false;
+				player.GetComponent<JogadorScript>().enabled = false;
 			}
 		}
 	}
