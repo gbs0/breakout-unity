@@ -7,13 +7,14 @@ public class DerrotaScript : MonoBehaviour
 
 	Rigidbody2D rb;             // Set the variable type
 	int hit_times = 0;
+
 	void Start() 
 	{
 		rb = GetComponent<Rigidbody2D>(); 
 	}
 	void OnTriggerEnter2D(Collider2D colisor)
 	{
-		print(colisao.gameObject.tag);
+		print(colisor.gameObject.tag);
 	}	
 
 	void OnTriggerStay2D(Collider2D colisor)
@@ -26,7 +27,7 @@ public class DerrotaScript : MonoBehaviour
 
 	}
 
-	void Die(int hit_times)
+	void Update()
 	{
 		if (hit_times > 3) {
 			if(Time.timeScale == 1)
@@ -34,7 +35,5 @@ public class DerrotaScript : MonoBehaviour
 			else
 				Time.timeScale == 1;
 		}
-		// freeze game
 	}
-
 }
