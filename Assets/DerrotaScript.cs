@@ -11,12 +11,15 @@ public class DerrotaScript : MonoBehaviour
 	// bool isGoingUp = true;
 	GameObject player;
 	GameObject ball;
+	GameObject gameOver;
 
 	void Start() 
 	{
 		rb = GetComponent<Rigidbody2D>(); 
 		player = GameObject.Find("Jogador");
 		ball = GameObject.Find("Bola");
+		gameOver = GameObject.find("GameOver");
+		gameOver.SetActive(false);
 	}
 
 	void Update()
@@ -60,9 +63,9 @@ public class DerrotaScript : MonoBehaviour
 				Invoke("Respawn", 2);
 				Debug.Log("Hit Barrier");
 				lifes--;
-			} else
-			{
-				player.GetComponent<JogadorScript>().enabled = false;
+			} else {
+				player.GetComponent<JogadorScript>().enabled = false; // Get script component from player
+				gameOver.SetActive(true);
 			}
 		}
 	}
