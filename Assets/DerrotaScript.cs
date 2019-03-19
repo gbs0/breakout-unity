@@ -15,7 +15,6 @@ public class DerrotaScript : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody2D>(); 
 		player = GameObject.Find("Jogador");
-		Vector2 resetPosition = new Vector2(0, -4,491);
 	}
 
 	void Update()
@@ -33,7 +32,9 @@ public class DerrotaScript : MonoBehaviour
 	void Respawn()
 	{
 		Instantiate(prefab);
-
+		Vector3 resetPosition = jogador.transform.position;
+		resetPosition.x = 0;
+		jogador.transform.position = resetPosition;
 	}
 
 	void OnTriggerEnter2D(Collider2D colisor)
