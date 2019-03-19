@@ -25,10 +25,12 @@ public class DerrotaScript : MonoBehaviour
 		// 		Time.timeScale == 1;
 		}
 	}
+	
 	void Respawn()
 	{
-		//Instatiate(gameObject)
+		Instatiate(prefab);
 	}
+
 	void OnTriggerEnter2D(Collider2D colisor)
 	{
 		print(colisor.gameObject.tag);
@@ -43,7 +45,10 @@ public class DerrotaScript : MonoBehaviour
 
 	void OnTriggerExit2D(Collider2D colisor)
 	{
+		if(colisor.tag == "Bola")
+		{
 
+		}
 	}
 }
 
