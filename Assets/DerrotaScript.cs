@@ -10,31 +10,33 @@ public class DerrotaScript : MonoBehaviour
 	public int lifes;
 	// bool isGoingUp = true;
 	GameObject player;
+	GameObject ball;
 
 	void Start() 
 	{
 		rb = GetComponent<Rigidbody2D>(); 
 		player = GameObject.Find("Jogador");
+		ball = GameObject.Find("Bola");
 	}
 
 	void Update()
 	{
 		// this should be an bool condition
-		if (hit_times >= 3) {
-			Debug.Log("Defeat!");
+		// if (hit_times >= 3) {
+		// 	Debug.Log("Defeat!");
 		// 	if(Time.timeScale == 1)
 		// 			Time.timeScale == 0;
 		// 	} else {
 		// 		Time.timeScale == 1;
-		}
+		// }
 	}
 
 	void Respawn()
 	{
 		Instantiate(prefab);
-		Vector3 resetPosition = jogador.transform.position;
+		Vector3 resetPosition = player.transform.position;
 		resetPosition.x = 0;
-		jogador.transform.position = resetPosition;
+		player.transform.position = resetPosition;
 	}
 
 	void OnTriggerEnter2D(Collider2D colisor)
@@ -57,8 +59,13 @@ public class DerrotaScript : MonoBehaviour
 			if (lifes > 0) {
 				Invoke("Respawn", 2);
 				Debug.Log("Hit Barrier");
+				lifes--;
+			} else
+			{
+				ball.GetComponent<BolaScript>().enable = false;
 			}
 		}
 	}
 }
+
 
