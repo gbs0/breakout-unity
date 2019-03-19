@@ -6,8 +6,10 @@ public class DerrotaScript : MonoBehaviour
 {	
 
 	Rigidbody2D rb;             // Set the variable type
-	int hit_times = 0;
+	public int hit_times;
 	bool isGoingUp = true;
+	public GameObject prefab;
+	GameObject player;
 
 	void Start() 
 	{
@@ -25,10 +27,10 @@ public class DerrotaScript : MonoBehaviour
 		// 		Time.timeScale == 1;
 		}
 	}
-	
+
 	void Respawn()
 	{
-		Instatiate(prefab);
+		Instantiate(prefab);
 	}
 
 	void OnTriggerEnter2D(Collider2D colisor)
