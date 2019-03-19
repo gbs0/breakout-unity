@@ -7,8 +7,8 @@ public class DerrotaScript : MonoBehaviour
 
 	Rigidbody2D rb;             // Set the variable type
 	public GameObject prefab;
-	public int hit_times;
-	bool isGoingUp = true;
+	public int lifes;
+	// bool isGoingUp = true;
 	GameObject player;
 
 	void Start() 
@@ -53,7 +53,11 @@ public class DerrotaScript : MonoBehaviour
 	{
 		if(colisor.tag == "Bola")
 		{
-
+			Destroy(colisor.gameObject);
+			if (lifes > 0) {
+				Invoke("Respawn", 2);
+				Debug.Log("Hit Barrier");
+			}
 		}
 	}
 }
