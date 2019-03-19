@@ -25,7 +25,10 @@ public class DerrotaScript : MonoBehaviour
 		// 		Time.timeScale == 1;
 		}
 	}
-
+	void Respawn()
+	{
+		//Instatiate(gameObject)
+	}
 	void OnTriggerEnter2D(Collider2D colisor)
 	{
 		print(colisor.gameObject.tag);
