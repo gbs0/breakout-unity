@@ -6,7 +6,7 @@ public class DerrotaScript : MonoBehaviour
 {	
 
 	Rigidbody2D rb;             // Set the variable type
-	int hit_times = 3;
+	int hit_times = 0;
 	bool isGoingUp = true;
 
 	void Start() 
