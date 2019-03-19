@@ -7,6 +7,7 @@ public class DerrotaScript : MonoBehaviour
 
 	Rigidbody2D rb;             // Set the variable type
 	int hit_times = 0;
+	bool isGoingUp = true;
 
 	void Start() 
 	{
@@ -29,7 +30,8 @@ public class DerrotaScript : MonoBehaviour
 
 	void Update()
 	{
-		if (hit_times > 3) {
+		// this should be an bool condition
+		if () {
 			if(Time.timeScale == 1)
 					Time.timeScale == 0;
 			else
