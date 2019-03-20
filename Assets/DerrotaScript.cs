@@ -67,7 +67,7 @@ public class DerrotaScript : MonoBehaviour
 				component.ChangeLife(lifes);
 			} else {
 				player.GetComponent<JogadorScript>().enabled = false; // Get script component from player
-				ball.GetComponent<SpriteRenderer>().enabled = false;
+				ball.GetComponent<SpriteRenderer>().enabled = false;	// Get SpriteRenderer component
 				gameOver.SetActive(true);
 
 			}
