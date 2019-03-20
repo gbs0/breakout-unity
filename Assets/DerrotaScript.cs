@@ -20,8 +20,8 @@ public class DerrotaScript : MonoBehaviour
 		
 		player = GameObject.Find("Jogador");
 		ball = GameObject.Find("Bola");
-		gameOver_UI = GameObject.Find("GameOver");
-		gameOver_UI.SetActive(false);
+		gameOver = GameObject.Find("GameOver");
+		gameOver.SetActive(false);
 		
 		component = Object.FindObjectOfType<UIScript>();
 		component.ChangeLife(lifes);
@@ -67,7 +67,7 @@ public class DerrotaScript : MonoBehaviour
 				component.ChangeLife(lifes);
 			} else {
 				player.GetComponent<JogadorScript>().enabled = false; // Get script component from player
-				ball.GetComponent<SpriteRenderer>().enable = false;
+				ball.GetComponent<SpriteRenderer>().enabled = false;
 				gameOver.SetActive(true);
 
 			}
