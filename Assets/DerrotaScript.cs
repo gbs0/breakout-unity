@@ -12,6 +12,7 @@ public class DerrotaScript : MonoBehaviour
 	GameObject player;
 	GameObject ball;
 	GameObject gameOver;
+	UIScript component;
 
 	void Start() 
 	{
@@ -20,6 +21,8 @@ public class DerrotaScript : MonoBehaviour
 		ball = GameObject.Find("Bola");
 		gameOver = GameObject.Find("GameOver");
 		gameOver.SetActive(false);
+		component = Object.FindObjectOfType<UIScript>();
+		component.ChangeLife(lifes);
 	}
 
 	void Update()
@@ -29,9 +32,7 @@ public class DerrotaScript : MonoBehaviour
 		// 	Debug.Log("Defeat!");
 		// 	if(Time.timeScale == 1)
 		// 			Time.timeScale == 0;
-		// 	} else {
-		// 		Time.timeScale == 1;
-		// }
+		// 	}
 	}
 
 	void Respawn()
@@ -63,7 +64,7 @@ public class DerrotaScript : MonoBehaviour
 				Invoke("Respawn", 2);
 				Debug.Log("Hit Barrier");
 				lifes--;
-				Object.FindObjectOfType<UIScript>();
+				component.ChangeLife(lifes);
 			} else {
 				player.GetComponent<JogadorScript>().enabled = false; // Get script component from player
 				gameOver.SetActive(true);

@@ -6,16 +6,10 @@ using UnityEngine.UI;
 
 public class UIScript : MonoBehaviour
 {
+		public Text lifes;
 
-    // Start is called before the first frame update
-    void Start()
+    public void ChangeLife(int value)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+    	lifes.text = "Lifes: " + value;
     }
 }
