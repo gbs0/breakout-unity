@@ -46,8 +46,6 @@ public class DerrotaScript : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D colisor)
 	{
 		print(colisor.gameObject.tag);
-		// if tag == bola 
-		// hit_times++;
 	}	
 
 	void OnTriggerStay2D(Collider2D colisor)
