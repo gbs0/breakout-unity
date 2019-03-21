@@ -14,8 +14,15 @@ public class UIScript : MonoBehaviour
     	lifes.text = "Lifes: " + value;
     }
 
+    void Start()
+    {
+    	for (int i = 0; i < 61; i++) {
+    		Debug.Log(i);
+    	}
+    }
+
     void Update()
     {
-    	
+
     }
 }
