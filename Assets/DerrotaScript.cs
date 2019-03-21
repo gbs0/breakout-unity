@@ -19,7 +19,10 @@ public class DerrotaScript : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>(); 
 		
 		player = GameObject.Find("Jogador");
+		
 		ball = GameObject.Find("Bola");
+		ball.GetComponent<SpriteRenderer>().enabled = true;
+
 		gameOver = GameObject.Find("GameOver");
 		gameOver.SetActive(false);
 		
