@@ -46,7 +46,7 @@ public class BolaScript : MonoBehaviour
         }
 
         //if (colisao.gameObject.tag == "Crate001" && doublePoints) {}
-        // if (colisao.gameObject.tag == "Crate001" && !doublePoints) {}
+        //if (colisao.gameObject.tag == "Crate001" && !doublePoints) {}
     }
 
     void OnCollisionStay2D(Collision2D colisao)
