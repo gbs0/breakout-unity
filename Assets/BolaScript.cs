@@ -7,6 +7,7 @@ public class BolaScript : MonoBehaviour
     Rigidbody2D rb;             // Set the variable type
     public Text score;          // Set the score reference on UI;    
     public int playerScore;   // Hold player score
+    public bool doublePoints;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class BolaScript : MonoBehaviour
         //rb = new.RigidBody2D();                     // Init a new RigidBody on game object 
         Vector2 force = new Vector2(0, -200);         // Add x and y paramaters to Vector2 Variable
         rb.AddForce(force);                           // Call the method for addForce on RigidBody
+        doublePoints = false;
     }
 
     // Update is called once per frame
@@ -33,6 +35,11 @@ public class BolaScript : MonoBehaviour
             Destroy(colisao.gameObject);
             playerScore++; 
             score.text = "Score: " + playerScore.ToString() + "0";
+        }
+
+        if (colisao.gameObject.tag == "Crate001") {
+            Destroy(colisao.gameObject);
+                
         }
     }
 
