@@ -42,6 +42,7 @@ public class BolaScript : MonoBehaviour
             Destroy(colisao.gameObject);
             doublePoints = true;
             playerScore += 2;
+            score.text = "Score: " + playerScore.ToString() + "0";
         }
     }
 
