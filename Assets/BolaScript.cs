@@ -33,13 +33,15 @@ public class BolaScript : MonoBehaviour
         print(colisao.gameObject.tag);
         if (colisao.gameObject.tag == "Bloco") {
             Destroy(colisao.gameObject);
+            doublePoints = false;
             playerScore++; 
             score.text = "Score: " + playerScore.ToString() + "0";
         }
 
         if (colisao.gameObject.tag == "Crate001") {
             Destroy(colisao.gameObject);
-                
+            doublePoints = true;
+            playerScore += 2;
         }
     }
 
