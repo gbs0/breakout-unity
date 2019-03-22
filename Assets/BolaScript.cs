@@ -44,6 +44,9 @@ public class BolaScript : MonoBehaviour
             playerScore += 2;
             score.text = "Score: " + playerScore.ToString() + "0";
         }
+
+        //if (colisao.gameObject.tag == "Crate001" && doublePoints) {}
+        // if (colisao.gameObject.tag == "Crate001" && !doublePoints) {}
     }
 
     void OnCollisionStay2D(Collision2D colisao)
