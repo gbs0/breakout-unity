@@ -9,10 +9,16 @@ public class MainMenu : MonoBehaviour
 		public Text gameTitle;
 
     // Start is called before the first frame update
+    void Start()
+    {
+    	gameTitle = GameObject.Find("GameTitle").GetComponent<Text>();
+    }
+
     void Update()
     {
 
     }
+    
     public void PlayGame()
     {
     	SceneManager.LoadScene(1);
