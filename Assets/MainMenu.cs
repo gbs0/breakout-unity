@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 		public Text gameTitle;
+		float changeTime;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,16 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-
+    	// Debug.Log(Time.time);
+    	if (changeTime < Time.time) 
+    	{
+    		if (gameTitle.color = Color.white) {
+    			gameTitle.color = new Color(1 ,0.6f, 0);
+    			} else {
+    				gameTitle.color = Color.white;
+    			}
+    		changeTime = Time.time + 0.5f;
+    	}
     }
     
     public void PlayGame()
