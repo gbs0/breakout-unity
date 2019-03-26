@@ -51,7 +51,7 @@ public class BolaScript : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D colisao)
     {
-        print("Stay");   
+        // print("Stay");   
     }
 
     void OnCollisionExit2D(Collision2D colisao)
@@ -65,10 +65,10 @@ public class BolaScript : MonoBehaviour
         //float diferenca = transform.position.x - colisao.transform.x 
         if (colisao.gameObject.tag == "Player") {
             if (transform.position.x < colisao.transform.position.x)
-                print("quina esquerda");
+                // print("quina esquerda");
                 rb.AddForce(forceLeft);
             } else {
-                print("quina direita");
+                // print("quina direita");
                 rb.AddForce(forceRight);
             }    
         }

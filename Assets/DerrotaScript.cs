@@ -56,7 +56,7 @@ public class DerrotaScript : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D colisor)
 	{
-		print(colisor.gameObject.tag);
+		// print(colisor.gameObject.tag);
 	}	
 
 	void OnTriggerStay2D(Collider2D colisor)

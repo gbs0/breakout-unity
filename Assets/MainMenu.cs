@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-    	Debug.Log((int)Time.time);
+    	// Debug.Log((int)Time.time);
     	if (changeTime < Time.time) 
     	{
     		if (gameTitle.color == Color.white) {
