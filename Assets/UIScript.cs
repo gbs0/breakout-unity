@@ -23,6 +23,6 @@ public class UIScript : MonoBehaviour
 
     void Update()
     {
-        time.text = i;
+        
     }
 }
