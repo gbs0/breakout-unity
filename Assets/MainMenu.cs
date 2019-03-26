@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
     	// Debug.Log(Time.time);
     	if (changeTime < Time.time) 
     	{
-    		if (gameTitle.color = Color.white) {
+    		if (gameTitle.color == Color.white) {
     			gameTitle.color = new Color(1 ,0.6f, 0);
     			} else {
     				gameTitle.color = Color.white;
