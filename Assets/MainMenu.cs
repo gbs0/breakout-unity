@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 {
 		public Text gameTitle;
 		float changeTime;
+		public Text time;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-    	// Debug.Log(Time.time);
+    	Debug.Log((int)Time.time);
     	if (changeTime < Time.time) 
     	{
     		if (gameTitle.color == Color.white) {

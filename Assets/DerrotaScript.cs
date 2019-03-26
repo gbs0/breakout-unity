@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DerrotaScript : MonoBehaviour
 {	
@@ -48,6 +49,11 @@ public class DerrotaScript : MonoBehaviour
 		player.transform.position = resetPosition;
 	}
 
+	void Restart() 
+	{
+		SceneManager.LoadScene("Menu");
+	}
+
 	void OnTriggerEnter2D(Collider2D colisor)
 	{
 		print(colisor.gameObject.tag);
@@ -72,7 +78,7 @@ public class DerrotaScript : MonoBehaviour
 				player.GetComponent<JogadorScript>().enabled = false; // Get script component from player
 				ball.GetComponent<SpriteRenderer>().enabled = false;	// Get SpriteRenderer component
 				gameOver.SetActive(true);
-
+				Invoke("Restart", 3);
 			}
 		}
 	}
