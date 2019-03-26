@@ -30,7 +30,7 @@ public class BolaScript : MonoBehaviour
     // Methods for collision
     void OnCollisionEnter2D(Collision2D colisao)
     {
-        print(colisao.gameObject.tag);
+        // print(colisao.gameObject.tag);
         if (colisao.gameObject.tag == "Bloco") {
             Destroy(colisao.gameObject);
             doublePoints = false;
@@ -56,15 +56,17 @@ public class BolaScript : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D colisao)
     {
-        
-        // ADD BALL TRANSFORM
-        // print(colisao.transform.position.x);
+
         Vector2 forceLeft = new Vector2(-100f, 0);
-        Vector2 forceRight = new Vector2(100f, 0);        
+        Vector2 forceRight = new Vector2(100f, 0);
+
+        // print(colisao.transform.position.x);         // Print ball Transform x
+
         //print(colisao.gameObject.transform.position);   // Pick value from player axis
+        
         //float diferenca = transform.position.x - colisao.transform.x 
         if (colisao.gameObject.tag == "Player") {
-            if (transform.position.x < colisao.transform.position.x)
+            if (transform.position.x < colisao.transform.position.x) {
                 // print("quina esquerda");
                 rb.AddForce(forceLeft);
             } else {
@@ -74,3 +76,4 @@ public class BolaScript : MonoBehaviour
         }
         
     }
+}
