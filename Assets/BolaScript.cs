@@ -31,6 +31,7 @@ public class BolaScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D colisao)
     {
         // print(colisao.gameObject.tag);
+        
         if (colisao.gameObject.tag == "Bloco") {
             Destroy(colisao.gameObject);
             doublePoints = false;
