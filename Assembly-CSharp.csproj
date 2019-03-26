@@ -57,6 +57,7 @@
      <Compile Include="Assets\DerrotaScript.cs" />
      <Compile Include="Assets\JogadorScript.cs" />
      <Compile Include="Assets\MainMenu.cs" />
+     <Compile Include="Assets\SpawnBlocks.cs" />
      <Compile Include="Assets\UIScript.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/gpineappleb/Desktop/c9_Backup/breakout-unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
