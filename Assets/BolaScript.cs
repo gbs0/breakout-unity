@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -45,8 +45,8 @@ public class BolaScript : MonoBehaviour
             score.text = "Score: " + playerScore.ToString() + "0";
         }
 
-        //if (colisao.gameObject.tag == "Crate001" && doublePoints) {}
-        //if (colisao.gameObject.tag == "Crate001" && !doublePoints) {}
+        // if (colisao.gameObject.tag == "Crate001" && doublePoints) {}
+        // if (colisao.gameObject.tag == "Crate001" && !doublePoints) {}
     }
 
     void OnCollisionStay2D(Collision2D colisao)
