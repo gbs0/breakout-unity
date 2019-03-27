@@ -66,6 +66,7 @@ public class BolaScript : MonoBehaviour
         //print(colisao.gameObject.transform.position);   // Pick value from player axis
         
         //float diferenca = transform.position.x - colisao.transform.x 
+        
         if (colisao.gameObject.tag == "Player") {
             if (transform.position.x < colisao.transform.position.x) {
                 // print("quina esquerda");

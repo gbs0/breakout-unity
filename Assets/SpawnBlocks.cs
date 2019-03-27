@@ -7,15 +7,16 @@ public class SpawnBlocks : MonoBehaviour
 {
     // Referencia ao prefab dos blocos
 		public GameObject block;
+		public GameObject superblock;
+
 		public Vector2 genesisBlock;
-		public int actualScene;
+		
+		int actualScene; 
 		int level = 0;
 
     void Start()
     {
         Debug.Log(SceneManager.sceneCount);
-        level++;
-        blockCreator();
     }
 
     // Update is called once per frame
@@ -36,6 +37,17 @@ public class SpawnBlocks : MonoBehaviour
 	    		copia.transform.position = newPosition;
 	    	}	
     	}
-    	    	
+    }
+
+    void OnTriggerEnter(Collider element)
+    {
+    	if (element.tag == "Bola")
+    	{
+    		if(Bloco.counter == 0)
+    		{
+    			level++;
+        	blockCreator();
+    		}
+    	}
     }
 }
