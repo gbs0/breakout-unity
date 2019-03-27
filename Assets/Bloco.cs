@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bloco : MonoBehaviour
 {
-    static int counter;
+    public static int counter;
 
     // Start is called before the first frame update
     void Start()
