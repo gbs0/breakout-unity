@@ -6,7 +6,7 @@ public class BolaScript : MonoBehaviour
 {
     Rigidbody2D rb;             // Set the variable type
     public Text score;          // Set the score reference on UI;    
-    // public int playerScore;   // Hold player score
+    public int playerScore;   // Hold player score
     public bool doublePoints;
 
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class BolaScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D colisao)
     {
         // print(colisao.gameObject.tag);
-        
+
         if (colisao.gameObject.tag == "Bloco") {
             Destroy(colisao.gameObject);
             doublePoints = false;
