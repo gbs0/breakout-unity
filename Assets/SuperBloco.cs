@@ -9,6 +9,6 @@ public class SuperBloco : Bloco
  	void OnDestroy() {
  		counter--;
  		GameObject comum = Instantiate(comumBlockPrefab, transform.parent);
- 		comum.trasform.position = transform.position;
+ 		comum.transform.position = transform.position;
  	}
 }
