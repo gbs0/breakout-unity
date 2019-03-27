@@ -9,11 +9,13 @@ public class SpawnBlocks : MonoBehaviour
 		public GameObject block;
 		public Vector2 genesisBlock;
 		public int actualScene;
+		int level = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         Debug.Log(SceneManager.sceneCount);
+        level++;
+        blockCreator();
     }
 
     // Update is called once per frame
