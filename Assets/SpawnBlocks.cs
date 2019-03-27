@@ -17,7 +17,7 @@ public class SpawnBlocks : MonoBehaviour
     void Start()
     {
         Debug.Log(SceneManager.sceneCount);
-        blockCreator();
+
     }
 
     // Update is called once per frame
@@ -42,14 +42,15 @@ public class SpawnBlocks : MonoBehaviour
     	}
     }
 
-    void OnTriggerEnter(Collider element)
+    void OnTriggerEnter2D(Collider2D element)
     {
-    	if (element.tag == "Bola")
-    	{
-    		if(Bloco.counter == 0)
+    	if (element.tag == "Bola") {
+    		if (Bloco.counter == 0)
     		{
+    			Debug.Log("Create blocks");
     			level++;
-        	// blockCreator();
+        	blockCreator();
+        	Debug.Log("Spawning");
     		}
     	}
     }

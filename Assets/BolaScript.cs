@@ -39,12 +39,12 @@ public class BolaScript : MonoBehaviour
             score.text = "Score: " + playerScore.ToString() + "0";
         }
 
-        if (colisao.gameObject.tag == "Crate001") {
-            Destroy(colisao.gameObject);
-            doublePoints = true;
-            playerScore += 2;
-            score.text = "Score: " + playerScore.ToString() + "0";
-        }
+        // if (colisao.gameObject.tag == "") {
+        //     Destroy(colisao.gameObject);
+        //     doublePoints = true;
+        //     playerScore += 2;
+        //     score.text = "Score: " + playerScore.ToString() + "0";
+        // }
 
         // if (colisao.gameObject.tag == "Crate001" && doublePoints) {}
         // if (colisao.gameObject.tag == "Crate001" && !doublePoints) {}
@@ -66,7 +66,7 @@ public class BolaScript : MonoBehaviour
         //print(colisao.gameObject.transform.position);   // Pick value from player axis
         
         //float diferenca = transform.position.x - colisao.transform.x 
-        
+
         if (colisao.gameObject.tag == "Player") {
             if (transform.position.x < colisao.transform.position.x) {
                 // print("quina esquerda");
