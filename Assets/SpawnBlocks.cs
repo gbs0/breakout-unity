@@ -17,12 +17,13 @@ public class SpawnBlocks : MonoBehaviour
     void Start()
     {
         Debug.Log(SceneManager.sceneCount);
+        blockCreator();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+      Debug.Log("Contador: " + Bloco.counter);
     }
 
     void blockCreator()
@@ -48,7 +49,7 @@ public class SpawnBlocks : MonoBehaviour
     		if(Bloco.counter == 0)
     		{
     			level++;
-        	blockCreator();
+        	// blockCreator();
     		}
     	}
     }

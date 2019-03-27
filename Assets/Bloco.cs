@@ -18,7 +18,7 @@ public class Bloco : MonoBehaviour
     	
     }
 
-    void onDestroy() 
+    void OnDestroy() 
     {
     	counter--;
     }
