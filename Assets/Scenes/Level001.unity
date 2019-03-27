@@ -4125,9 +4125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ee8d02ac8a24efe944bec5fac996fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  block: {fileID: 0}
+  block: {fileID: 7624345897184735646, guid: 69db926e045b8ff4288034c61ff1e5b1, type: 3}
   superblock: {fileID: 0}
-  genesisBlock: {x: 0, y: 0}
+  genesisBlock: {x: -3.07, y: 3.92}
 --- !u!61 &1800387096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5113,6 +5113,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bloco
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624345897184735646, guid: 69db926e045b8ff4288034c61ff1e5b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7624345897184735616, guid: 69db926e045b8ff4288034c61ff1e5b1,
         type: 3}
