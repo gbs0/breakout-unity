@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnBlocks : MonoBehaviour
 {
     // Referencia ao prefab dos blocos
 		public GameObject block;
 		public Vector2 genesisBlock;
+		public int actualScene;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log(SceneManager.sceneCount);
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class SpawnBlocks : MonoBehaviour
 
     void blockCreator()
     {
+    	
     	for(int column = 0; column < 3; column++) {
     		for (int row = 0; row < 5; row++) {
 	    		GameObject copia = Instantiate(block, transform);
@@ -31,8 +34,6 @@ public class SpawnBlocks : MonoBehaviour
 	    		copia.transform.position = newPosition;
 	    	}	
     	}
-
-
     	    	
     }
 }
