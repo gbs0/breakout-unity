@@ -27,8 +27,8 @@ public class SpawnBlocks : MonoBehaviour
 
     void blockCreator()
     {
-    	
-    	for(int column = 0; column < 3; column++) {
+    	int levelLines = Mathf.Clamp(level, 1, 6);
+    	for(int column = 0; column < levelLines; column++) {
     		for (int row = 0; row < 5; row++) {
 	    		GameObject copia;
 	    		if (1 < level/2) copia = Instantiate(superblock, transform);
