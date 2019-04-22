@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class BolaScript : MonoBehaviour
 {
     Rigidbody2D rb;             
-    public Text score;
-    public Transform playerPaddle;          
+    public Text score;       
     public int playerScore;   	
     public bool doublePoints;
     public bool inPlay;
+
+    public Transform playerPaddle;
 
     void Start()
     {
@@ -83,7 +84,7 @@ public class BolaScript : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("bottom")) {
+        if (other.CompareTag("Bottom")) {
             rb.velocity = Vector2.zero;
             inPlay = false;
         }

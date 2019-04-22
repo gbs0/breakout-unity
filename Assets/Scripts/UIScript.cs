@@ -8,7 +8,7 @@ public class UIScript : MonoBehaviour
 {
 		public Text lifes;
 		public Text time;
-        public Text score;
+        // public Text score;
 
     public void ChangeLife(int value)
     {

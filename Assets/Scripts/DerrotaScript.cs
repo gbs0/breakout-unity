@@ -7,9 +7,12 @@ public class DerrotaScript : MonoBehaviour
 {	
 
 	Rigidbody2D rb;             
-	public GameObject prefab;
+	
+	public Transform playerPaddle;
+	
+	public GameObject ballPrefab;
+	
 	public int lifes;
-	// bool isGoingUp = true;
 	GameObject player;
 	GameObject ball;
 	GameObject gameOver;
@@ -23,6 +26,7 @@ public class DerrotaScript : MonoBehaviour
 		
 		ball = GameObject.Find("Bola");
 		ball.GetComponent<SpriteRenderer>().enabled = true;
+		// Get ball Rigid Body
 
 		gameOver = GameObject.Find("GameOver");
 		gameOver.SetActive(false);
@@ -43,10 +47,14 @@ public class DerrotaScript : MonoBehaviour
 
 	void Respawn()
 	{
-		Instantiate(prefab);
+		Instantiate(ballPrefab);
+		
 		Vector3 resetPosition = player.transform.position;
 		resetPosition.x = 0;
 		player.transform.position = resetPosition;
+		
+		// ball.transform.position = playerPaddle.position;
+
 	}
 
 	void Restart() 
