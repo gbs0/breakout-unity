@@ -26,7 +26,7 @@ public class DerrotaScript : MonoBehaviour
 		
 		ball = GameObject.Find("Bola");
 		ball.GetComponent<SpriteRenderer>().enabled = true;
-		// Get ball Rigid Body
+		ball.GetComponent<Rigidbody2D>(); 
 
 		gameOver = GameObject.Find("GameOver");
 		gameOver.SetActive(false);
@@ -53,7 +53,7 @@ public class DerrotaScript : MonoBehaviour
 		resetPosition.x = 0;
 		player.transform.position = resetPosition;
 		
-		// ball.transform.position = playerPaddle.position;
+		ball.transform.position = playerPaddle.position;
 
 	}
 
