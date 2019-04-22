@@ -30,7 +30,7 @@ public class BolaScript : MonoBehaviour
             transform.position = playerPaddle.position;
         } 
 
-        if  (Input.GetKeyDown("Jump") && !inPlay) {
+        if  (Input.GetKeyDown(KeyCode.Space) && !inPlay) {
             inPlay = true;
             rb.AddForce(Vector2.up * 400);
         }
@@ -79,7 +79,15 @@ public class BolaScript : MonoBehaviour
                 // print("quina direita");
                 rb.AddForce(forceRight);
             }    
-        }
-        
+        }    
     }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("bottom")) {
+            rb.velocity = Vector2.zero;
+            inPlay = false;
+        }
+    }
+
+
 }
