@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class BolaScript : MonoBehaviour
 {
     Rigidbody2D rb;             
-    public Text score;          
+    public Text score;
+    public Transform playerPaddle;          
     public int playerScore;   	
     public bool doublePoints;
     public bool inPlay;
@@ -23,9 +24,20 @@ public class BolaScript : MonoBehaviour
         //RigidBody2D colisorDebug;
         //colisorDebug = new.RigidBody2D();
         //colisorDebug = GetComponent<>();
+
+        if (!inPlay) {
+            transform.position = playerPaddle.position;
+        } 
+
+        if  (Input.GetKeyDown("Jump")) {
+            inPlay = true;
+            rb.AddForce(Vector2.up * 400)
+        }
+
+
     }
 
-    // Methods for collision
+    
     void OnCollisionEnter2D(Collision2D colisao)
     {
         // print(colisao.gameObject.tag);
