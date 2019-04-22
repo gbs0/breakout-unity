@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class DerrotaScript : MonoBehaviour
 {	
 
-	Rigidbody2D rb;             // Set the variable type
+	Rigidbody2D rb;             
 	public GameObject prefab;
 	public int lifes;
 	// bool isGoingUp = true;
@@ -57,6 +57,7 @@ public class DerrotaScript : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D colisor)
 	{
 		// print(colisor.gameObject.tag);
+
 	}	
 
 	void OnTriggerStay2D(Collider2D colisor)

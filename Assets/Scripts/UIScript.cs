@@ -8,6 +8,7 @@ public class UIScript : MonoBehaviour
 {
 		public Text lifes;
 		public Text time;
+        public Text score;
 
     public void ChangeLife(int value)
     {
@@ -16,9 +17,9 @@ public class UIScript : MonoBehaviour
 
     void Start()
     {
-    	for (int i = 0; i < 61; i++) {
-    		// Debug.Log(i);
-    	}
+    	// for (int i = 0; i < 61; i++) {
+    	// 	// Debug.Log(i);
+    	// }
     }
 
     void Update()

@@ -16,14 +16,14 @@ public class SpawnBlocks : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(SceneManager.sceneCount);
+       // Debug.Log(SceneManager.sceneCount);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-      Debug.Log("Contador: " + Bloco.counter);
+        // Debug.Log("Contador: " + Bloco.counter);
     }
 
     void blockCreator()
@@ -47,10 +47,10 @@ public class SpawnBlocks : MonoBehaviour
     	if (element.tag == "Bola") {
     		if (Bloco.counter == 0)
     		{
-    			Debug.Log("Create blocks");
-    			level++;
-        	blockCreator();
-        	Debug.Log("Spawning");
+    		  Debug.Log("Create blocks");
+    		  level++;
+        	  blockCreator();
+        	  // Debug.Log("Spawning");
     		}
     	}
     }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class BolaScript : MonoBehaviour
 {
     Rigidbody2D rb;             
@@ -15,8 +16,8 @@ public class BolaScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();             // Pick RigidBody from game object
         //rb = new.RigidBody2D();                     // Init a new RigidBody on game object 
-        Vector2 force = new Vector2(0, -200);         // Add x and y paramaters to Vector2 Variable
-        rb.AddForce(force);                           // Call the method for addForce on RigidBody
+        // Vector2 force = new Vector2(0, -200);         // Add x and y paramaters to Vector2 Variable
+        // rb.AddForce(force);                           // Call the method for addForce on RigidBody
     }
 
     void Update()
@@ -29,11 +30,10 @@ public class BolaScript : MonoBehaviour
             transform.position = playerPaddle.position;
         } 
 
-        if  (Input.GetKeyDown("Jump")) {
+        if  (Input.GetKeyDown("Jump") && !inPlay) {
             inPlay = true;
-            rb.AddForce(Vector2.up * 400)
+            rb.AddForce(Vector2.up * 400);
         }
-
 
     }
 
