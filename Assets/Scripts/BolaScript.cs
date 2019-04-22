@@ -59,12 +59,6 @@ public class BolaScript : MonoBehaviour
         Vector2 forceLeft = new Vector2(-100f, 0);
         Vector2 forceRight = new Vector2(100f, 0);
 
-        // print(colisao.transform.position.x);         // Print ball Transform x
-
-        //print(colisao.gameObject.transform.position);   // Pick value from player axis
-        
-        //float diferenca = transform.position.x - colisao.transform.x 
-
         if (colisao.gameObject.tag == "Player") {
             if (transform.position.x < colisao.transform.position.x) {
                 // print("quina esquerda");
