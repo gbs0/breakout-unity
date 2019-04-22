@@ -47,13 +47,14 @@ public class DerrotaScript : MonoBehaviour
 
 	void Respawn()
 	{
+		
+		print("ME");
 		Instantiate(ballPrefab);
 		
 		Vector3 resetPosition = player.transform.position;
 		resetPosition.x = 0;
 		player.transform.position = resetPosition;
-		
-		ball.transform.position = playerPaddle.position;
+				// ball..position = playerPaddle.position;
 
 	}
 
