@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 public class BolaScript : MonoBehaviour
 {
-    Rigidbody2D rb;             // Set the variable type
-    public Text score;          // Set the score reference on UI;    
-    public int playerScore;   // Hold player score
+    Rigidbody2D rb;             
+    public Text score;          
+    public int playerScore;   	
     public bool doublePoints;
+    public bool inPlay;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();             // Pick RigidBody from game object
@@ -19,7 +19,6 @@ public class BolaScript : MonoBehaviour
         doublePoints = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         //RigidBody2D colisorDebug;
