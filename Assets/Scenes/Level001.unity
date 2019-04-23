@@ -1162,12 +1162,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &393534113 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8280861679004454787, guid: ab97a5980a1504dfe8ebb587ac94c7cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 8280861678898562408}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &462162297
 GameObject:
   m_ObjectHideFlags: 0
@@ -3983,7 +3977,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPaddle: {fileID: 1949733278}
-  ballPrefab: {fileID: 393534113}
+  ballPrefab: {fileID: 8280861679004454787, guid: ab97a5980a1504dfe8ebb587ac94c7cd,
+    type: 3}
   lifes: 3
 --- !u!1 &1762776909
 GameObject:
