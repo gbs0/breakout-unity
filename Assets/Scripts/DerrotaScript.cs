@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -48,13 +48,12 @@ public class DerrotaScript : MonoBehaviour
 	void Respawn()
 	{
 		
-		print("ME");
 		Instantiate(ballPrefab);
 		
 		Vector3 resetPosition = player.transform.position;
 		resetPosition.x = 0;
 		player.transform.position = resetPosition;
-				// ball..position = playerPaddle.position;
+		ball.position = playerPaddle.position;
 
 	}
 
