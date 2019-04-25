@@ -54,7 +54,7 @@ public class DerrotaScript : MonoBehaviour
 		Vector3 resetPosition = player.transform.position;
 		resetPosition.x = 0;
 		player.transform.position = resetPosition;
-		ball.position = playerPaddle.position;
+		ball.transform.position = playerPaddle.position;
 
 	}
 
