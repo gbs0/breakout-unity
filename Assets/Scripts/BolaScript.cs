@@ -12,7 +12,8 @@ public class BolaScript : MonoBehaviour
     public bool doublePoints;
     public bool inPlay;
 
-    public Transform playerPaddle;
+    // public Transform playerPaddle;
+    GameObject playerPaddle;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class BolaScript : MonoBehaviour
         // Vector2 force = new Vector2(0, -200);         // Add x and y paramaters to Vector2 Variable
         // rb.AddForce(force);                           // Call the method for addForce on RigidBody
 
+        playerPaddle = GameObject.Find("/Jogador/Ball Position");
     }
 
     void Update()
@@ -34,7 +36,8 @@ public class BolaScript : MonoBehaviour
         //colisorDebug = GetComponent<>();
 
         if (!inPlay) {
-            transform.position = playerPaddle.position;
+            // transform.position = playerPaddle.position;
+            transform.position = playerPaddle.transform.position;
         } 
 
         if  (Input.GetKeyDown(KeyCode.Space) && !inPlay) {
