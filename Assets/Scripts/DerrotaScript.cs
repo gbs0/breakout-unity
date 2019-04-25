@@ -8,9 +8,10 @@ public class DerrotaScript : MonoBehaviour
 
 	Rigidbody2D rb;             
 	
+	// Pick Ball Position Child Transform
 	GameObject playerPaddle;
-	// Transform playerPaddle;
 	
+	// public GameObject ballPrefab;
 	public GameObject ballPrefab;
 	
 	public int lifes;

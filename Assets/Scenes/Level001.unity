@@ -3976,9 +3976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8735b126e51fa43b781a75482dba770b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPaddle: {fileID: 1949733278}
-  ballPrefab: {fileID: 8280861679004454787, guid: ab97a5980a1504dfe8ebb587ac94c7cd,
-    type: 3}
+  ballPrefab: {fileID: 0}
   lifes: 3
 --- !u!1 &1762776909
 GameObject:
@@ -5351,5 +5349,10 @@ PrefabInstance:
       propertyPath: playerPaddle
       value: 
       objectReference: {fileID: 1949733278}
+    - target: {fileID: 8280861679004454791, guid: ab97a5980a1504dfe8ebb587ac94c7cd,
+        type: 3}
+      propertyPath: doublePoints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab97a5980a1504dfe8ebb587ac94c7cd, type: 3}
