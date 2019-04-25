@@ -8,7 +8,8 @@ public class DerrotaScript : MonoBehaviour
 
 	Rigidbody2D rb;             
 	
-	public Transform playerPaddle;
+	GameObject playerPaddle;
+	// Transform playerPaddle;
 	
 	public GameObject ballPrefab;
 	
@@ -31,7 +32,10 @@ public class DerrotaScript : MonoBehaviour
 
 		gameOver = GameObject.Find("GameOver");
 		gameOver.SetActive(false);
-		
+
+		playerPaddle = GameObject.Find("/Jogador/Ball Position");
+
+
 		component = Object.FindObjectOfType<UIScript>();
 		component.ChangeLife(lifes);
 	}
@@ -54,7 +58,7 @@ public class DerrotaScript : MonoBehaviour
 		Vector3 resetPosition = player.transform.position;
 		resetPosition.x = 0;
 		player.transform.position = resetPosition;
-		ball.transform.position = playerPaddle.position;
+		ball.transform.position = playerPaddle.transform.position;
 
 	}
 
