@@ -14,7 +14,7 @@ public class DerrotaScript : MonoBehaviour
 	// public GameObject ballPrefab;
 	public GameObject ballPrefab;
 	
-	int textScore;
+	int textScore = 0;
 	public int lifes;
 	GameObject player;
 	GameObject ball;
@@ -40,6 +40,7 @@ public class DerrotaScript : MonoBehaviour
 		component = Object.FindObjectOfType<UIScript>();
 		component.ChangeLife(lifes);
 		component.ChangeScore(textScore);
+
 	}
 
 	void Update()
