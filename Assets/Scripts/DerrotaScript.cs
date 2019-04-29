@@ -28,7 +28,7 @@ public class DerrotaScript : MonoBehaviour
 		player = GameObject.Find("Jogador");
 		
 		// And this will not be found
-		if (GameObject.Find("Bola")) {
+		if (GameObject.Find("Bola") != null) {
 			ball = GameObject.Find("Bola");
 		} else {
 			ball = GameObject.Find("Bola(Clone)");
