@@ -27,7 +27,13 @@ public class DerrotaScript : MonoBehaviour
 		
 		player = GameObject.Find("Jogador");
 		
-		ball = GameObject.Find("Bola");
+		// And this will not be found
+		if (GameObject.Find("Bola")) {
+			ball = GameObject.Find("Bola");
+		} else {
+			ball = GameObject.Find("Bola(Clone)");
+		}
+
 		ball.GetComponent<SpriteRenderer>().enabled = true;
 		ball.GetComponent<Rigidbody2D>(); 
 		ball.GetComponent<Transform>();
@@ -44,6 +50,7 @@ public class DerrotaScript : MonoBehaviour
 
 	void Update()
 	{
+		print(ball);
 		// this should be an bool condition
 		// if (hit_times >= 3) {
 		// 	Debug.Log("Defeat!");
@@ -60,6 +67,7 @@ public class DerrotaScript : MonoBehaviour
 		Vector3 resetPosition = player.transform.position;
 		resetPosition.x = 0;
 		player.transform.position = resetPosition;
+		// When call Respawn(), ball is destroyed
 		ball.transform.position = playerPaddle.transform.position;
 
 	}
