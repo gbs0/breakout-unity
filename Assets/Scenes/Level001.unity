@@ -2382,7 +2382,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score : 000'
+  m_Text: 'Points:'
 --- !u!222 &879515610
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2596,6 +2596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifes: {fileID: 750708395}
   time: {fileID: 1036615501}
+  score: {fileID: 879515609}
 --- !u!1 &1036615500
 GameObject:
   m_ObjectHideFlags: 0
