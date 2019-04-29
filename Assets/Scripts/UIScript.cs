@@ -8,11 +8,17 @@ public class UIScript : MonoBehaviour
 {
 		public Text lifes;
 		public Text time;
+        public Text score;
         // public Text score;
 
     public void ChangeLife(int value)
     {
     	lifes.text = "Lifes: " + value;
+    }
+
+    public void ChangeScore(int value)
+    {
+        score.text = "Score :" + score;
     }
 
     void Start()
