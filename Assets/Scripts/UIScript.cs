@@ -18,7 +18,7 @@ public class UIScript : MonoBehaviour
 
     public void ChangeScore(int value)
     {
-        score.text =  score + "00";
+        score.text =  score + "000";
     }
 
     void Start()

@@ -40,7 +40,6 @@ public class DerrotaScript : MonoBehaviour
 		component = Object.FindObjectOfType<UIScript>();
 		component.ChangeLife(lifes);
 		component.ChangeScore(textScore);
-
 	}
 
 	void Update()
