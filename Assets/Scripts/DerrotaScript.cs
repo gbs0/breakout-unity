@@ -28,11 +28,9 @@ public class DerrotaScript : MonoBehaviour
 		player = GameObject.Find("Jogador");
 		
 		// And this will not be found
-		if (GameObject.Find("Bola") != null) {
-			ball = GameObject.Find("Bola");
-		} else {
-			ball = GameObject.Find("Bola(Clone)");
-		}
+		
+		ball = GameObject.Find("Bola");		
+		
 
 		ball.GetComponent<SpriteRenderer>().enabled = true;
 		ball.GetComponent<Rigidbody2D>(); 
@@ -45,7 +43,6 @@ public class DerrotaScript : MonoBehaviour
 
 		component = Object.FindObjectOfType<UIScript>();
 		component.ChangeLife(lifes);
-		component.ChangeScore(textScore);
 	}
 
 	void Update()
@@ -63,7 +60,7 @@ public class DerrotaScript : MonoBehaviour
 	{
 		
 		Instantiate(ballPrefab);
-		
+		ball = GameObject.Find("Bola(Clone)");
 		Vector3 resetPosition = player.transform.position;
 		resetPosition.x = 0;
 		player.transform.position = resetPosition;
