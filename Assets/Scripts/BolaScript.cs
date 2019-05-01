@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class BolaScript : MonoBehaviour
 {
-    Rigidbody2D rb;             
+    Rigidbody2D rb;  
+    UIScript component;           
     // public Text score;
-    Text score;       
+           
     public int playerScore;   	
     public bool doublePoints;
     public bool inPlay;
@@ -20,13 +21,15 @@ public class BolaScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();             // Pick RigidBody from game object
         
         // score = GetComponent<UnityEngine.UI.Text>();
-        score = GameObject.Find("Score").GetComponent<Text>();
-
+        
         // rb = new.RigidBody2D();                     // Init a new RigidBody on game object 
         // Vector2 force = new Vector2(0, -200);         // Add x and y paramaters to Vector2 Variable
         // rb.AddForce(force);                           // Call the method for addForce on RigidBody
 
         playerPaddle = GameObject.Find("/Jogador/Ball Position");
+
+        component = Object.FindObjectOfType<UIScript>();
+        
     }
 
     void Update()
@@ -55,8 +58,7 @@ public class BolaScript : MonoBehaviour
         if (colisao.gameObject.tag == "Bloco") {
             Destroy(colisao.gameObject);
             doublePoints = false;
-            playerScore++; 
-            score.text = "Score: " + playerScore.ToString() + "0";
+            component.ChangeScore(10);
         }
 
         // if (colisao.gameObject.tag == "") {

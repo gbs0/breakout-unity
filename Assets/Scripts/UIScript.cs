@@ -9,6 +9,8 @@ public class UIScript : MonoBehaviour
 		public Text lifes;
 		public Text time;
         public Text score;
+        int scoreValue;
+        
         // public Text score;
 
     public void ChangeLife(int value)
@@ -18,7 +20,7 @@ public class UIScript : MonoBehaviour
 
     public void ChangeScore(int value)
     {
-        score.text =  score + "000";
+        score.text =  value + "00";
     }
 
     void Start()
