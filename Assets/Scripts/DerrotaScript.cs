@@ -47,7 +47,7 @@ public class DerrotaScript : MonoBehaviour
 
 	void Update()
 	{
-		print(ball);
+		// print(ball);
 		// this should be an bool condition
 		// if (hit_times >= 3) {
 		// 	Debug.Log("Defeat!");
